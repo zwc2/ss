@@ -1,11 +1,11 @@
-var v='t10';
+var v='ss0';
 self.addEventListener('install', function(e) {
  e.waitUntil(
    caches.open(v).then(function(cache) {
      return cache.addAll([
-       '/t/',
-       '/t/index.html',
-       '/t/index.js'
+       //'/ss/',
+       '/ss/index.html',
+       '/ss/index.js'
      ]);
    })
  );
@@ -14,7 +14,7 @@ self.addEventListener('activate',function(event){
   event.waitUntil(
     caches.keys().then(function(keyList){
       return Promise.all(keyList.map(function(key,i){
-        if(key!==v)return caches.delete(keyList[i])
+        if(key.substring(0,2)=='ss'&&key!==v)return caches.delete(keyList[i])
       }))
     })
   )
