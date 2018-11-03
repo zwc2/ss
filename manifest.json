@@ -1,0 +1,15 @@
+{
+  "background_color": "purple",
+  "description": "test",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "ico/fox-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "test app",
+  "short_name": "test",
+  "start_url": "/t/index.html"
+}

@@ -1,0 +1,56 @@
+<link rel="manifest" href="manifest.json">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="index.js" defer></script>
+<style>
+  html{background-color:white}
+  table,input,textarea{width:99%}
+  table{position:relative}
+  textarea{height:9em}
+  td{width:30%}
+</style>
+<table>
+  <tr><td style="height:2em"></td></tr>
+  <tr><td>File #</td><td><input type="tel"></td></tr>
+  <tr>
+    <td>Email</td><td colspan=2><input type="email"></td>
+  </tr>
+  <tr>
+    <td>Address</td><td colspan=2><input></td>
+  </tr>
+  <tr>
+    <td>VIN</td><td colspan=2><input></td>
+  </tr>
+  <tr>
+    <td>Trim</td>
+    <td>Odo</td>
+    <td>Tire Depth (32nds)</td>
+  </tr>
+  <tr>
+    <td><input></td>
+    <td><input type="number"></td>
+    <td><input type="number"></td>
+  </tr>
+  <tr>
+    <td>License</td><td>Exp</td><td>State</td>
+  </tr>
+  <tr>
+    <td><input></td>
+    <td><input type="month"></td>
+    <td><input></td>
+  </tr>
+  <tr>
+    <td>Damage</td>
+  </tr>
+  <tr>
+    <td colspan=3><textarea></textarea></td>
+  </tr>
+  <tr>
+    <td>UPD</td>
+  </tr>
+  <tr>
+    <td colspan=3><textarea></textarea></td>
+  </tr>
+</table>
+final
+<div id="notification" style="display:none">A new version of this app is available. Click <a id="reload">here</a> to update.</div>
+<button class="add-button">Add to home screen</button>
