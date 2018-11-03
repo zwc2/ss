@@ -1,15 +1,15 @@
 {
-  "background_color": "purple",
-  "description": "test",
+  "background_color": "blue",
+  "description": "scope",
   "display": "fullscreen",
   "icons": [
     {
-      "src": "ico/fox-icon.png",
-      "sizes": "192x192",
+      "src": "ico/128.png",
+      "sizes": "128x128",
       "type": "image/png"
     }
   ],
-  "name": "test app",
-  "short_name": "test",
-  "start_url": "/t/index.html"
+  "name": "scope",
+  "short_name": "scope",
+  "start_url": "/ss/index.html"
 }
