@@ -1,5 +1,21 @@
-  let newWorker;
+(function(){var d=document;
+var inputs=d.getElementsByClassName('i');
+var ichange=e=>{
+  localStorage.setItem(e.id,e.value);
+};
+for(let i of inputs){
+  i.onchange=function(){ichange(this)};
+  i.value=localStorage.getItem(i.id);
+}
+d.getElementById('r').addEventListener("click",e=>{
+  var c=confirm("The form will be cleared. Continue?");
+  if(c){localStorage.clear()}
+  else{e.preventDefault()}
+});})();
 
+
+
+let newWorker;
   // The click event on the notification
   document.getElementById('reload').addEventListener('click', function(){
     newWorker.postMessage({ action: 'skipWaiting' });
