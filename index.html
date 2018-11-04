@@ -9,17 +9,18 @@
   textarea{height:9em}
   td{width:30%}
 </style>
+<form id="form">
 <table>
   <tr><td style="height:2em"></td></tr>
-  <tr><td>File #</td><td><input type="tel"></td></tr>
+  <tr><td>File #</td><td><input id="id" type="tel" class="i"></td></tr>
   <tr>
-    <td>Email</td><td colspan=2><input type="email"></td>
+    <td>Email</td><td colspan=2><input id="email" type="email" class="i"></td>
   </tr>
   <tr>
-    <td>Address</td><td colspan=2><input></td>
+    <td>Address</td><td colspan=2><input id="address" class="i"></td>
   </tr>
   <tr>
-    <td>VIN</td><td colspan=2><input></td>
+    <td>VIN</td><td colspan=2><input id="vin" class="i"></td>
   </tr>
   <tr>
     <td>Trim</td>
@@ -27,30 +28,31 @@
     <td>Tire Depth (32nds)</td>
   </tr>
   <tr>
-    <td><input></td>
-    <td><input type="number"></td>
-    <td><input type="number"></td>
+    <td><input id="trim" class="i"></td>
+    <td><input id="odo" type="number" class="i"></td>
+    <td><input id="tires" type="number" class="i"></td>
   </tr>
   <tr>
     <td>License</td><td>Exp</td><td>State</td>
   </tr>
   <tr>
-    <td><input></td>
-    <td><input type="month"></td>
-    <td><input></td>
+    <td><input id="lic" class="i"></td>
+    <td><input id="exp" type="month" class="i"></td>
+    <td><input id="state" class="i"></td>
   </tr>
   <tr>
     <td>Damage</td>
   </tr>
   <tr>
-    <td colspan=3><textarea></textarea></td>
+    <td colspan=3><textarea id="dmg" class="i"></textarea></td>
   </tr>
   <tr>
     <td>UPD</td>
   </tr>
   <tr>
-    <td colspan=3><textarea></textarea></td>
+    <td colspan=3><textarea id="upd" class="i"></textarea></td>
   </tr>
 </table>
-final
+<input id="r" type="reset">
+</form>
 <div id="notification" style="display:none">A new version of this app is available. Click <a id="reload">here</a> to update.</div>
