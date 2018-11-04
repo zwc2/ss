@@ -1,4 +1,4 @@
-var v='ss0';
+var v='ss1';
 self.addEventListener('install', function(e) {
  e.waitUntil(
    caches.open(v).then(function(cache) {
