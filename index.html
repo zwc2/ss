@@ -6,15 +6,17 @@
   html{background-color:white}
   table,input,textarea{width:99%;font-size:16px}
   table{position:relative}
-  textarea{height:9em}
+  textarea{height:1em}
   td{width:30%}
+  @media print{
+    .ph{display:none}
+  }
 </style>
 <form id="form">
 <table>
-  <tr><td style="height:2em"></td></tr>
-  <tr><td>File #</td><td><input id="id" type="tel" class="i"></td></tr>
+  <tr><td>File #</td><td><input id="id" class="i"></td></tr>
   <tr>
-    <td>Email</td><td colspan=2><input id="email" type="email" class="i"></td>
+    <td>Email</td><td colspan=2><input id="email" class="i"></td>
   </tr>
   <tr>
     <td>Address</td><td colspan=2><input id="address" class="i"></td>
@@ -23,13 +25,31 @@
     <td>VIN</td><td colspan=2><input id="vin" class="i"></td>
   </tr>
   <tr>
+    <td>Prod</td>
+    <td>Year</td>
+    <td>Make</td>
+  </tr>
+  <tr>
+    <td><input id="prod" type="month" class="i"></td>
+    <td><input id="year" class="i"></td>
+    <td><input id="make" class="i"></td>
+  </tr>
+  <tr>
+    <td>Model</td>
     <td>Trim</td>
     <td>Odo</td>
+  </tr>
+  <tr>
+    <td><input id="model" class="i"></td>
+    <td><input id="trim" class="i"></td>
+    <td><input id="odo" type="number" class="i"></td>
+  </tr>
+  <tr>
+    <td colspan=2>Tires</td>
     <td>Tire Depth (32nds)</td>
   </tr>
   <tr>
-    <td><input id="trim" class="i"></td>
-    <td><input id="odo" type="number" class="i"></td>
+    <td colspan=2><input id="tirei" class="i"></td>
     <td><input id="tires" type="number" class="i"></td>
   </tr>
   <tr>
@@ -39,6 +59,14 @@
     <td><input id="lic" class="i"></td>
     <td><input id="exp" type="month" class="i"></td>
     <td><input id="state" class="i"></td>
+  </tr>
+  <tr>
+    <td>Interior</td><td>Exterior</td><td>Engine</td>
+  </tr>
+  <tr>
+    <td><select id="int" class="i"><option></option><option>Poor</option><option>Average</option><option>Good</option></select></td>
+    <td><select id="ext" class="i"><option></option><option>Poor</option><option>Average</option><option>Good</option></select></td>
+    <td><select id="engine" class="i"><option></option><option>Poor</option><option>Average</option><option>Good</option></select></td>
   </tr>
   <tr>
     <td>Damage</td>
@@ -52,7 +80,17 @@
   <tr>
     <td colspan=3><textarea id="upd" class="i"></textarea></td>
   </tr>
+  <tr>
+    <td>Options</td>
+  </tr>
+  <tr>
+    <td colspan=3><textarea id="opts" class="i"></textarea></td>
+  </tr>
+  <tr class="ph">
+    <td><input id="r" type="reset"></td>
+    <td></td>
+    <td><input id="p" type="button" value="Print"></td>
+  </tr>
 </table>
-<input id="r" type="reset">
 </form>
 <div id="notification" style="display:none">A new version of this app is available. Click <a id="reload">here</a> to update.</div>
