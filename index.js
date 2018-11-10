@@ -17,11 +17,15 @@ document.getElementById('p').addEventListener('click',e=>{
   print();
 });
 let tas=document.getElementsByTagName('textarea');
+var tasize=e=>{
+  e.style.height=0;
+  e.style.height=e.scrollHeight+'px';
+};
 for(let ta of tas){
   ta.addEventListener('change',function(){
-    this.style.height=0;
-    this.style.height=this.scrollHeight+'px';
-  })
+    tasize(this);
+  });
+  tasize(ta);
 }
 })();
 
