@@ -11,7 +11,19 @@ d.getElementById('r').addEventListener("click",e=>{
   var c=confirm("The form will be cleared. Continue?");
   if(c){localStorage.clear()}
   else{e.preventDefault()}
-});})();
+});
+
+document.getElementById('p').addEventListener('click',e=>{
+  print();
+});
+let tas=document.getElementsByTagName('textarea');
+for(let ta of tas){
+  ta.onchange=function(){
+    this.style.height=0;
+    this.style.height=this.scrollHeight+'px';
+  }
+}
+})();
 
 
 
