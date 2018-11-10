@@ -1,7 +1,7 @@
 {
   "background_color": "blue",
   "description": "scope",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "ico/192.png",
