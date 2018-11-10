@@ -1,13 +1,12 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="ico/192.png">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 <script src="index.js" defer></script>
 <style>
   html{background-color:white}
-  table,input,textarea{width:99%;font-size:16px}
+  table,input,select,textarea{width:99%}
   table{position:relative}
-  textarea{height:1em}
-  td{width:30%}
+  /*td{width:33%}*/
   @media print{
     .ph{display:none}
   }
@@ -31,7 +30,7 @@
   </tr>
   <tr>
     <td><input id="prod" type="month" class="i"></td>
-    <td><input id="year" class="i"></td>
+    <td><input id="year" type="number" class="i"></td>
     <td><input id="make" class="i"></td>
   </tr>
   <tr>
