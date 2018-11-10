@@ -18,10 +18,10 @@ document.getElementById('p').addEventListener('click',e=>{
 });
 let tas=document.getElementsByTagName('textarea');
 for(let ta of tas){
-  ta.onchange=function(){
+  ta.addEventListener('change',function(){
     this.style.height=0;
     this.style.height=this.scrollHeight+'px';
-  }
+  })
 }
 })();
 
