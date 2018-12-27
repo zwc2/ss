@@ -14,7 +14,7 @@ for(let i of inputs){
 }
 window.onbeforeunload=function(){
   for(let i of inputs){
-    localStorage.setItem(e.id,e.value);
+    localStorage.setItem(i.id,i.value);
   }
 };
 d.getElementById('r').addEventListener("click",e=>{
