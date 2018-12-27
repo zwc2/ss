@@ -1,12 +1,22 @@
 (function(){var d=document;
 var inputs=d.getElementsByClassName('i');
+/*
 var ichange=e=>{
   localStorage.setItem(e.id,e.value);
-};
+}
 for(let i of inputs){
   i.onchange=function(){ichange(this)};
   i.value=localStorage.getItem(i.id);
 }
+*/
+for(let i of inputs){
+  i.value=localStorage.getItem(i.id);
+}
+window.onbeforeunload=function(){
+  for(let i of inputs){
+    localStorage.setItem(e.id,e.value);
+  }
+};
 d.getElementById('r').addEventListener("click",e=>{
   var c=confirm("The form will be cleared. Continue?");
   if(c){localStorage.clear()}
