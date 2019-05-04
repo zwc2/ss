@@ -3,93 +3,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 <script src="index.js" defer></script>
 <style>
-  html{background-color:white}
-  table,input,select,textarea{width:99%}
-  table{position:relative}
-  /*td{width:33%}*/
+  input,select,textarea{width:99%}
+  #form{display:grid;grid-template-columns:1fr 1fr 1fr}
+  .s2{grid-column:span 2}
+  .s3{grid-column:span 3}
   @media print{
     .ph{display:none}
   }
 </style>
 <form id="form">
-<table>
-  <tr><td>File #</td><td><input id="id" class="i"></td></tr>
-  <tr>
-    <td>Email</td><td colspan=2><input id="email" class="i"></td>
-  </tr>
-  <tr>
-    <td>Address</td><td colspan=2><input id="address" class="i"></td>
-  </tr>
-  <tr>
-    <td>VIN</td><td colspan=2><input id="vin" class="i"></td>
-  </tr>
-  <tr>
-    <td>Prod</td>
-    <td>Year</td>
-    <td>Make</td>
-  </tr>
-  <tr>
-    <td><input id="prod" type="month" class="i"></td>
-    <td><input id="year" type="number" class="i"></td>
-    <td><input id="make" class="i"></td>
-  </tr>
-  <tr>
-    <td>Model</td>
-    <td>Trim</td>
-    <td>Odo</td>
-  </tr>
-  <tr>
-    <td><input id="model" class="i"></td>
-    <td><input id="trim" class="i"></td>
-    <td><input id="odo" type="number" class="i"></td>
-  </tr>
-  <tr>
-    <td colspan=2>Tires</td>
-    <td>Tire Depth (32nds)</td>
-  </tr>
-  <tr>
-    <td colspan=2><input id="tirei" class="i"></td>
-    <td><input id="tires" type="number" class="i"></td>
-  </tr>
-  <tr>
-    <td>License</td><td>Exp</td><td>State</td>
-  </tr>
-  <tr>
-    <td><input id="lic" class="i"></td>
-    <td><input id="exp" type="month" class="i"></td>
-    <td><input id="state" class="i"></td>
-  </tr>
-  <tr>
-    <td>Interior</td><td>Exterior</td><td>Engine</td>
-  </tr>
-  <tr>
-    <td><select id="int" class="i"><option></option><option>Poor</option><option>Average</option><option>Good</option></select></td>
-    <td><select id="ext" class="i"><option></option><option>Poor</option><option>Average</option><option>Good</option></select></td>
-    <td><select id="engine" class="i"><option></option><option>Poor</option><option>Average</option><option>Good</option></select></td>
-  </tr>
-  <tr>
-    <td>Damage</td>
-  </tr>
-  <tr>
-    <td colspan=3><textarea id="dmg" class="i"></textarea></td>
-  </tr>
-  <tr>
-    <td>UPD</td>
-  </tr>
-  <tr>
-    <td colspan=3><textarea id="upd" class="i"></textarea></td>
-  </tr>
-  <tr>
-    <td>Options</td>
-  </tr>
-  <tr>
-    <td colspan=3><textarea id="opts" class="i"></textarea></td>
-  </tr>
-  <tr class="ph">
-    <td><input id="r" type="reset"></td>
-    <td></td>
-    <td><input id="p" type="button" value="Print"></td>
-  </tr>
-</table>
+<z>File #</z><input id="id" class="i"><z></z>
+<z>Email</z><input id="email" class="i s2">
+<z>Address</z><input id="address" class="i s2">
+<z>VIN</z><input id="vin" class="i s2">
+<z>Prod</z><z>Year</z><z>Make</z>
+<input id="prod" type="month" class="i"><input id="year" type="number" class="i"><input id="make" class="i">
+<z>Model</z><z>Trim</z><z>Odo</z>
+<input id="model" class="i"><input id="trim" class="i"><input id="odo" type="number" class="i">
+<z class="s2">Tires</z><z>Tire Depth (32nds)</z>
+<input id="tirei" class="i s2"><input id="tires" type="number" class="i">
+<z>License</z><z>Exp</z><z>State</z>
+<input id="lic" class="i"><input id="exp" type="month" class="i"><input id="state" class="i">
+<z>Interior</z><z>Exterior</z><z>Engine</z>
+<select id="int" class="i"><option></option><option>Poor</option><option>Average</option><option>Good</option></select>
+<select id="ext" class="i"><option></option><option>Poor</option><option>Average</option><option>Good</option></select>
+<select id="engine" class="i"><option></option><option>Poor</option><option>Average</option><option>Good</option></select>
+<z class="s3">Damage</z>
+<textarea id="dmg" class="i s3"></textarea>
+<z class="s3">UPD</z>
+<textarea id="upd" class="i s3"></textarea>
+<z class="s3">Options</z>
+<textarea id="opts" class="i s3"></textarea>
+<input id="r" type="reset" class="ph"><input id="pv" type="button" value="Preview" class="ph"><input id="p" type="button" value="Print" class="ph">
 </form>
 <div id="notification" style="display:none">A new version of this app is available. Click <a id="reload">here</a> to update.</div>
