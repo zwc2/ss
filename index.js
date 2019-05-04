@@ -16,6 +16,16 @@ d.getElementById('r').addEventListener("click",e=>{
 document.getElementById('p').addEventListener('click',e=>{
   print();
 });
+function pv(){
+  [...document.getElementsByClassName('ph')].map(e=>e.style.display='');
+  document.getElementById('form').removeEventListener('click',pv);
+};
+document.getElementById('pv').addEventListener('click',e=>{
+  [...document.getElementsByClassName('ph')].map(e=>e.style.display='none');
+  setTimeout(function(){
+    document.getElementById('form').addEventListener('click',pv);
+  }, 1000);
+});
 let tas=document.getElementsByTagName('textarea');
 var tasize=e=>{
   e.style.height=0;
